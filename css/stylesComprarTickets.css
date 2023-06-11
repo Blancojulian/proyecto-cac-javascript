@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100;200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500&family=Nunito:wght@200;300;400;500;700&display=swap');
+@font-face{
+    font-family: 'Montserrat';
+    src: url("../assets/font/Montserrat-VariableFont_wght.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer{
+    background-color: #193F69;
+}
+
+.total{
+    background-color: #B4EBFA;
+    color: #2F7F94;
+    border-radius: 0.2rem;
+}
+
+#categorias .cardCategoria.estudiante{
+    border: solid #193F69 0.15rem;
+}
+#categorias .cardCategoria.trainee{
+    border: solid #2F7F94 0.15rem;
+}
+#categorias .cardCategoria.junior{
+    border: solid #f0cd5b 0.15rem;
+}
+
+#categorias .cardCategoria:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0,0,0,.5);
+}
+
+
+
+@media screen and (min-width: 992px)  {
+
+    main.container{
+        max-width: 65%;
+        margin: 0 auto;
+    }
+}

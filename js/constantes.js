@@ -1,0 +1,18 @@
+const DESCUENTOS = {
+    ESTUDIANTE: 0.80,
+    TRAINEE: 0.50,
+    JUNIOR: 0.15
+}
+
+const CATEGORIAS = {
+    ESTUDIANTE: 'ESTUDIANTE',
+    TRAINEE: 'TRAINEE',
+    JUNIOR: 'JUNIOR'
+}
+
+Object.seal(DESCUENTOS);
+Object.freeze(DESCUENTOS);
+Object.seal(CATEGORIAS);
+Object.freeze(CATEGORIAS);
+
+export { DESCUENTOS, CATEGORIAS };

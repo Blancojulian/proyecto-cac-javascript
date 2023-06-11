@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/stylesComprarTickets.css">
+</head>
+
+<body>
+
+    <header class="header sticky-top ">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient ">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./../assets/img/sm/codoacodo.png" alt="Logo" width="100px"
+                        class="d-inline-block align-text-middle">
+                    Conf. Bs.As.
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!--collapse empieza-->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav w-100 justify-content-end">
+
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./../index.html#conferencia">La conferencia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./../index.html#oradores">Los oradores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./../index.html#lugarYFecha">Fecha y hora</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./../index.html#convierteteEnOrador">Conviertete en orador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-success" href="#">Comprar tickets</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <!--collapse termina-->
+            </div>
+        </nav>
+
+
+    </header>
+
+    <main class="container">
+
+        <section id="categorias" class="mt-5">
+            <div class="row text-center">
+                <div class="col-md-4 col.sm-12">
+                    <div class="card cardCategoria estudiante py-2 px-2 my-1">
+                        <div class="card-body">
+                          <h5 class="card-title">Estudiante</h5>
+                          <p class="card-text">Tiene un descuento</p>
+                          <br>
+                          <p class="fs-5 fw-bold">80%</p>
+                          <br> 
+                          <p>*presentar documentacion</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="card cardCategoria trainee py-2 px-2 my-1">
+                        <div class="card-body">
+                          <h5 class="card-title">Trainee</h5>
+                          <p class="card-text">Tiene un descuento</p>
+                          <br>
+                          <p class="fs-5 fw-bold">50%</p>
+                          <br> 
+                          <p>*presentar documentacion</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-4 col.sm-12">
+                    <div class="card cardCategoria junior py-2 px-2 my-1">
+                        <div class="card-body">
+                          <h5 class="card-title">Junior</h5>
+                          <p class="card-text">Tiene un descuento</p>
+                          <br>
+                          <p class="fs-5 fw-bold">15%</p>
+                          <br> 
+                          <p>*presentar documentacion</p>  
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="venta" class="">
+            <h2 class="text-center"><span class="fw-normal fs-6">VENTA</span><br>VALOR DE TICKET $200</h2>
+
+            <form action="" method="post" id="formVenta" class="formVenta">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 mb-3">
+                        <input id="nombre" class="inputForm form-control" type="text" placeholder="Nombre" required>
+                        <div id="errorNombre" class="errorInput bg-danger text-center text-white d-none">Error</div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-3">
+                        <input id="apellido" class="inputForm form-control" type="text" placeholder="Apellido" required>
+                        <div id="errorApellido" class="errorInput bg-danger text-center text-white d-none">Error</div>
+
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <input id="mail" class="inputForm form-control" type="mail" placeholder="Correo" required>
+                    <div id="errorMail" class="errorInput bg-danger text-center text-white d-none">Error</div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 mb-3">
+                        <label for="cantidad" class="form-label">Cantidad</label>
+                        <input id="cantidad" class="inputForm form-control" type="number" name="cantidad" placeholder="Cantidad" required>
+                        <div id="errorCantidad" class="errorInput bg-danger text-center text-white d-none">Error</div>
+                    
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-3">
+                        <label for="categoria" class="form-label">Categoria</label>
+                        <select name="categoria" id="categoria" class="inputForm form-select" required>
+                            <option value="" selected>Seleccione una opción</option>
+                            <option value="ESTUDIANTE">Estudiante</option>
+                            <option value="TRAINEE">Trainee</option>
+                            <option value="JUNIOR">Junior</option>
+                        </select>
+                        <div id="errorCategoria" class="errorInput bg-danger text-center text-white d-none">Error</div>
+
+                    </div>
+                </div>
+                <div class="total p-3 mb-3" >
+                    Total:
+                    <div class="importe d-inline-block" id="importe">$ 0,00</div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 mb-3">
+                        <input class="btn btn-success form-control" id="btnBorrar" type="reset" value="Borrar" required>
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-3">
+                        <input class="btn btn-success form-control" id="btnResumen" type="submit" value="Resumen" required></input>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer container-fluid mt-5 text-white">
+        <div class="row text-center gap-3 py-4 w-75 h-100 mx-auto justify-content-between align-items-center">
+            <a class="col-sm-12 col-md-1 text-decoration-none text-white" href="#">Preguntas Frecuentes</a>
+            <a class="col-sm-12 col-md-1 text-decoration-none text-white" href="#">Contactos</a>
+            <a class="col-sm-12 col-md-1 text-decoration-none text-white" href="#">Prensa</a>
+            <a class="col-sm-12 col-md-1 text-decoration-none text-white" href="#">Conferencias</a>
+            <a class="col-sm-12 col-md-2 text-decoration-none text-white" href="#">Terminos y Condiciones</a>
+            <a class="col-sm-12 col-md-1 text-decoration-none text-white" href="#">Privacidad</a>
+            <a class="col-sm-12 col-md-1 text-decoration-none text-white" href="#">Estudiantes</a>
+        </div>
+    </footer>
+
+    <script src="./../js/bootstrap.min.js"></script>
+    <script src="./../js/script.js" type="module"></script>
+</body>
+
+</html>

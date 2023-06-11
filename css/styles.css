@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100;200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500&family=Nunito:wght@200;300;400;500;700&display=swap');
+@font-face{
+    font-family: 'Montserrat';
+    src: url("../assets/font/Montserrat-VariableFont_wght.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.imgBA1, .imgBA2, .imgBA3{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    width: 100%;
+}
+.imgBA1{
+    background: linear-gradient(to bottom,#00000026, #000000c2,#00000026), url("../assets/img/sm/ba1.jpg");
+}
+.imgBA2{
+    background: linear-gradient(to bottom,#00000026, #000000c2,#00000026), url("../assets/img/sm/ba2.jpg");
+}
+.imgBA3{
+    background: linear-gradient(to bottom,#00000026, #000000c2,#00000026), url("../assets/img/sm/ba3.jpg");
+}
+#lugarYFecha img {
+    object-fit: cover;
+    object-position: center center;
+}
+
+.oradores img{
+    height: 45vh;
+}
+
+
+.footer{
+    background-color: #193F69;
+}
+
+@media screen and (min-width: 992px)  {
+
+    .formularioOrador.container{
+        max-width: 60%;
+    }
+    #conferencia .textoCarrusel{
+        max-width: 60%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:991px) {/*(min-width: 568px) and (max-width:767px)*/
+    
+    .imgBA1{
+        background: linear-gradient(to bottom,#00000026, #000000c2,#00000026), url("../assets/img/md/ba1.jpg");
+    }
+    .imgBA2{
+        background: linear-gradient(to bottom,#00000026, #000000c2,#00000026), url("../assets/img/md/ba2.jpg");
+    }
+    .imgBA3{
+        background: linear-gradient(to bottom,#00000026, #000000c2,#00000026), url("../assets/img/md/ba3.jpg");
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+    .imgBA1{
+        background: linear-gradient(to bottom,#00000026, #000000c2,#00000026), url("../assets/img/lg/ba1.jpg");
+    }
+    .imgBA2{
+        background: linear-gradient(to bottom,#00000026, #000000c2,#00000026), url("../assets/img/lg/ba2.jpg");
+    }
+    .imgBA3{
+        background: linear-gradient(to bottom,#00000026, #000000c2,#00000026), url("../assets/img/lg/ba3.jpg");
+    }
+    
+}
+
+@media screen and (min-width: 1200px)  {
+
+    .imgBA1{
+        background: linear-gradient(to bottom,#00000026, #000000c2,#00000026), url("../assets/img/ba1.jpg");
+    }
+    .imgBA2{
+        background: linear-gradient(to bottom,#00000026, #000000c2,#00000026), url("../assets/img/ba2.jpg");
+    }
+    .imgBA3{
+        background: linear-gradient(to bottom,#00000026, #000000c2,#00000026), url("../assets/img/ba3.jpg");
+    }
+    
+}
