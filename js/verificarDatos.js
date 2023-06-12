@@ -5,7 +5,7 @@ import { CATEGORIAS } from './constantes.js';
  * @param {string} str 
  * @returns Retorna true si es valido y false sino lo es.
  */
-export const esNombreOApellidoValido = (str) => /^[a-z|A-Z]+$/.test(str);
+export const esNombreOApellidoValido = (str) => /^[a-zA-ZÑñÁáÉéÍíÓóÚú]+$/.test(str);
 
 /**
  * Recibe un string por el mail y verifica si es valido.
