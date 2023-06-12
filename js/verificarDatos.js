@@ -32,4 +32,4 @@ export const esNumeroEnteroValido = (strNumero) => {
  * @param {string} categoria 
  * @returns Retorna true si es valido y false sino lo es.
  */
-export const esCategoriaValida = (categoria) => categoria === CATEGORIAS.ESTUDIANTE || categoria === CATEGORIAS.TRAINEE || categoria === CATEGORIAS.JUNIOR;
+export const esCategoriaValida = (categoria) => categoria === '' || categoria === CATEGORIAS.ESTUDIANTE || categoria === CATEGORIAS.TRAINEE || categoria === CATEGORIAS.JUNIOR;

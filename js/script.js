@@ -121,7 +121,7 @@ const ejecutarFuncionSegunCampo = (elemento) => {
             retorno = validarCampoYCambiarClase(elemento, esNumeroEnteroValido, 'Cantidad invalida, debe ser un numero entero')
             break;
         case 'categoria':
-            retorno = validarCampoYCambiarClase(elemento, esCategoriaValida, 'Categoria invalida')
+            retorno = elemento.value === '' ? true : validarCampoYCambiarClase(elemento, esCategoriaValida, 'Categoria invalida')
             break;
         default:
             retorno = false;
@@ -133,22 +133,29 @@ const ejecutarFuncionSegunCampo = (elemento) => {
 
 /**
  * Recorre los elementos html con la clase 'inputForm'(inputs y select) y ejecuta la
- * funcion, segun el id, para verificar el valor y muestra el error si hay
+ * funcion, segun el id, para verificar el valor, muestra el error si hay y hace focus al
+ * primer input con error.
  * @param {HTMLFormElement} form 
- * @returns Retorna true si todo los campos son valido y false al contrario
+ * @returns Retorna true si todo los campos son valido y false al contrario.
  */
 const validarCampos = (form) => {
 
     let retorno = true;
     const arrayInputs = form.querySelectorAll('.inputForm');
-    
+    let inputFirstError = null;
+
     arrayInputs.forEach(input => {
         
         if (!ejecutarFuncionSegunCampo(input) && retorno) {
             retorno = false;
+            inputFirstError = input;
         }
 
     });
+
+    if (!retorno && inputFirstError) {
+        inputFirstError.focus();
+    }
 
     return retorno;
 }
@@ -173,7 +180,8 @@ formVenta.addEventListener('submit', function (event) {
     if (validarCampos(this)) {
         const categoria = this.querySelector('#categoria').value;
         const cantidad = this.querySelector('#cantidad').value;
-        this.querySelector('#importe').innerText = formatearNumero( calcularTotal(+cantidad, DESCUENTOS[categoria]) );
+        const descuento = categoria === '' ? 0 : DESCUENTOS[categoria];
+        this.querySelector('#importe').innerText = formatearNumero( calcularTotal(+cantidad, descuento) );
         
     }
 
