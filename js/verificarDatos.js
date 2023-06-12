@@ -24,7 +24,7 @@ export const esMailValido = (strMail) => {
  */
 export const esNumeroEnteroValido = (strNumero) => {
     if(typeof strNumero === 'number') strNumero = strNumero.toString();
-    return !isNaN(strNumero) && strNumero !== '' &&  !strNumero.includes('.') &&  !strNumero.includes('-');
+    return !isNaN(strNumero) && strNumero !== '' &&  !strNumero.includes('.') &&  !strNumero.includes('-') && +strNumero > 0;
 }
 
 /**
