@@ -153,12 +153,20 @@ const validarCampos = (form) => {
     return retorno;
 }
 
+/**
+ * Agregue un EventListener al form para el evento reset, para que ademas resetee el total a cero
+ * y quite las clases agregada para mostrar errores y exitos
+ */
 formVenta.addEventListener('reset', function () {
     borrarErrores(this);
     resetTotal();
     this.querySelector('#importe').innerText = formatearNumero(getTotal());
 });
 
+/**
+ * Agregue un EventListener al form para el evento submit, que lo va a prevenir, evalua que los
+ * campos del form sean valido si lo son muestra el total y caso contrario muestra los errores
+ */
 formVenta.addEventListener('submit', function (event) {
     event.preventDefault();
 
@@ -187,6 +195,10 @@ formVenta.addEventListener('change', (event) => {
     }
 });
 
+/**
+ * Agrego un Event Listener al elemento que contiene las card categorias, en caso que el elemento clickeado posea
+ * la clase 'cardCategoria' o sea hijo, se cambia la seleccionada en el select
+ */
 categorias.addEventListener('click', (event) => {
 
     event.preventDefault();
